@@ -91,8 +91,9 @@ export default function App() {
     name: "Hotel La Glorieta",
     phone: "55-3077-1519",
     whatsappLink: "https://wa.me/525530771519?text=Hola,%20me%20gustaría%20pedir%20información%20sobre%20el%20Hotel%20La%20Glorieta.",
-    email: "hotel.laglorieta@hotmail.com", // Reemplazar con el email real
-    address: "Leona Vicario Manzana 028, 55900 Otumba de Gómez Farías, Méx.", // Reemplazar con la dirección real
+    email: "hotel.laglorieta@hotmail.com",
+    address: "Leona Vicario Manzana 028, 55900 Otumba de Gómez Farías, Méx.",
+    addresLink: "https://maps.app.goo.gl/vnnXumCkJe74y43f7",
     facebook: "https://www.facebook.com/share/1AKoAT4bDA/",
     instagram: "https://www.instagram.com/laglorietahm?utm_source=qr&igsh=ODB1a3hxbjUwOG1k",
   };
@@ -268,7 +269,7 @@ export default function App() {
               </div>
               <div className="text-center">
                 <h3 className="text-xl font-semibold">Dirección</h3>
-                <p className="text-stone-300 text-lg">{hotelInfo.address}</p>
+                <a href={hotelInfo.addresLink} target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:text-amber-300 text-lg transition-colors">{hotelInfo.address}</a>
               </div>
             </div>
             <div className="mt-12 bg-stone-700 h-64 w-full max-w-4xl mx-auto rounded-lg flex items-center justify-center">
