@@ -17,11 +17,10 @@ const CircleDot = (props) => (
   </svg>
 );
 
-const Utensils = (props) => (
+// NUEVO: Icono para Lavandería
+const Shirt = (props) => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
-    <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2" />
-    <path d="M7 2v20" />
-    <path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3z" />
+    <path d="M20.38 3.46 16 2a4 4 0 0 0-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z" />
   </svg>
 );
 
@@ -69,15 +68,33 @@ const X = (props) => (
   </svg>
 );
 
+// NUEVO: Iconos para redes sociales
+const Instagram = (props) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+        <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+        <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+    </svg>
+);
+
+const Facebook = (props) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+    </svg>
+);
+
 
 // --- Componente Principal de la Aplicación ---
 export default function App() {
-  // --- Datos del Hotel ---
+  // --- Datos del Hotel (ACTUALIZADOS) ---
   const hotelInfo = {
     name: "Hotel La Glorieta",
-    phone: "55-3077-1519", // Reemplazar con el teléfono real
-    email: "hotel.laglorieta@hotmail.com", // Reemplazar con el email real
-    address: "Leona Vicario Manzana 028, 55900 Otumba de Gómez Farías, Méx.", // Reemplazar con la dirección real
+    phone: "55-3077-1519",
+    whatsappLink: "https://wa.me/525530771519?text=Hola,%20me%20gustaría%20pedir%20información%20sobre%20el%20Hotel%20La%20Glorieta.",
+    email: "contacto@hotellaglorieta.com", // Reemplazar con el email real
+    address: "Plaza de la Constitución 10, Otumba de Gómez Farías, Méx.", // Reemplazar con la dirección real
+    facebook: "https://www.facebook.com/share/1AKoAT4bDA/",
+    instagram: "https://www.instagram.com/laglorietahm?utm_source=qr&igsh=ODB1a3hxbjUwOG1k",
   };
 
   const navLinks = [
@@ -88,16 +105,16 @@ export default function App() {
     { name: 'Contacto', href: '#contacto' },
   ];
 
+  // --- Servicios (ACTUALIZADOS) ---
   const services = [
-    { icon: <BedDouble className="w-10 h-10 text-amber-600"/>, text: "Diferentes tipos de habitaciones" },
-    { icon: <CircleDot className="w-10 h-10 text-amber-600"/>, text: "TuboHotel" },
-    { icon: <Utensils className="w-10 h-10 text-amber-600"/>, text: "Servicio a la habitación" },
-    { icon: <Tv className="w-10 h-10 text-amber-600"/>, text: "TV con cable" },
-    { icon: <Wifi className="w-10 h-10 text-amber-600"/>, text: "WIFI Gratuito" },
-    { icon: <ShowerHead className="w-10 h-10 text-amber-600"/>, text: "Agua caliente las 24hrs" },
+    { icon: <BedDouble className="w-10 h-10 text-amber-600"/>, text: "Diferentes tipos de habitaciones", description: "Habitaciones para cada tipo de viajero y presupuesto." },
+    { icon: <CircleDot className="w-10 h-10 text-amber-600"/>, text: "TuboHotel", description: "Una experiencia original y confortable para aventureros." },
+    { icon: <Shirt className="w-10 h-10 text-amber-600"/>, text: "Servicio de lavandería", description: "Mantén tu ropa impecable durante tu estancia (costo extra)." },
+    { icon: <Tv className="w-10 h-10 text-amber-600"/>, text: "TV con cable", description: "Disfruta de tus programas favoritos en la comodidad de tu cuarto." },
+    { icon: <Wifi className="w-10 h-10 text-amber-600"/>, text: "WIFI Gratuito", description: "Conéctate y comparte tus momentos en nuestras instalaciones." },
+    { icon: <ShowerHead className="w-10 h-10 text-amber-600"/>, text: "Agua caliente las 24hrs", description: "Una ducha relajante a cualquier hora del día." },
   ];
 
-  // Las imágenes que pusiste en la carpeta 'public'
   const galleryImages = [
     { src: '/galeria1.jpeg', alt: 'Patio con Tubohotels y palmeras' },
     { src: '/galeria3.jpeg', alt: 'Fachada del Hotel y Motel La Glorieta' },
@@ -145,7 +162,6 @@ export default function App() {
       <main>
         <section id="inicio" className="relative h-[60vh] min-h-[400px] flex items-center justify-center text-white">
           <div className="absolute inset-0 bg-black/50 z-10"></div>
-          {/* Usamos la imagen 'hero.jpeg' de la carpeta 'public' */}
           <img 
             src="/hero.jpg" 
             alt="Vista panorámica del Hotel La Glorieta" 
@@ -158,7 +174,7 @@ export default function App() {
             <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto drop-shadow-md">
               Vive una experiencia única en el corazón de Otumba. Comodidad, historia y un servicio excepcional te esperan.
             </p>
-            <a href="#contacto" className="mt-8 inline-block bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+            <a href={hotelInfo.whatsappLink} target="_blank" rel="noopener noreferrer" className="mt-8 inline-block bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition-transform transform hover:scale-105">
               Reservar Ahora
             </a>
           </div>
@@ -181,7 +197,7 @@ export default function App() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-stone-800">{service.text}</h3>
-                    <p className="mt-1 text-stone-500">Servicio incluido para garantizar tu máximo confort.</p>
+                    <p className="mt-1 text-stone-500">{service.description}</p>
                   </div>
                 </div>
               ))}
@@ -220,12 +236,11 @@ export default function App() {
                 <p className="mt-4 text-lg text-stone-600">
                   Atrévete a vivir una noche diferente en nuestras innovadoras habitaciones tipo tubo. Perfectas para aventureros que buscan confort y originalidad. Cuentan con una cómoda cama matrimonial, luz interior y contactos para tus dispositivos.
                 </p>
-                <a href="#contacto" className="mt-8 inline-block bg-stone-800 hover:bg-stone-900 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition-colors">
+                <a href={hotelInfo.whatsappLink} target="_blank" rel="noopener noreferrer" className="mt-8 inline-block bg-stone-800 hover:bg-stone-900 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition-colors">
                   Consultar Disponibilidad
                 </a>
               </div>
               <div className="order-1 md:order-2">
-                {/* Usamos la imagen 'galeria2.jpeg' para el Tubohotel */}
                 <img 
                   src="/galeria2.jpeg" 
                   alt="Interior de una habitación Tubohotel" 
@@ -244,8 +259,8 @@ export default function App() {
             </p>
             <div className="mt-10 flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12">
               <div className="text-center">
-                <h3 className="text-xl font-semibold">Teléfono</h3>
-                <a href={`tel:${hotelInfo.phone}`} className="text-amber-400 hover:text-amber-300 text-lg transition-colors">{hotelInfo.phone}</a>
+                <h3 className="text-xl font-semibold">WhatsApp</h3>
+                <a href={hotelInfo.whatsappLink} target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:text-amber-300 text-lg transition-colors">{hotelInfo.phone}</a>
               </div>
               <div className="text-center">
                 <h3 className="text-xl font-semibold">Email</h3>
@@ -265,8 +280,16 @@ export default function App() {
 
       <footer className="bg-stone-900 text-stone-400">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center">
+          <div className="flex justify-center space-x-6 mb-4">
+            <a href={hotelInfo.facebook} target="_blank" rel="noopener noreferrer" className="text-stone-400 hover:text-white transition-colors">
+              <Facebook className="w-6 h-6" />
+            </a>
+            <a href={hotelInfo.instagram} target="_blank" rel="noopener noreferrer" className="text-stone-400 hover:text-white transition-colors">
+              <Instagram className="w-6 h-6" />
+            </a>
+          </div>
           <p>&copy; {new Date().getFullYear()} {hotelInfo.name}. Todos los derechos reservados.</p>
-          <p className="text-sm mt-2">Diseño web por un amigo de la casa.</p>
+          <p className="text-sm mt-2">Diseño web por YaelContla.</p>
         </div>
       </footer>
     </div>
