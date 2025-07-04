@@ -76,7 +76,7 @@ export default function App() {
   const hotelInfo = {
     name: "Hotel La Glorieta",
     phone: "55-3077-1519", // Reemplazar con el teléfono real
-    email: "contacto@hotellaglorieta.com", // Reemplazar con el email real
+    email: "hotel.laglorieta@hotmail.com", // Reemplazar con el email real
     address: "Leona Vicario Manzana 028, 55900 Otumba de Gómez Farías, Méx.", // Reemplazar con la dirección real
   };
 
@@ -147,7 +147,7 @@ export default function App() {
           <div className="absolute inset-0 bg-black/50 z-10"></div>
           {/* Usamos la imagen 'hero.jpeg' de la carpeta 'public' */}
           <img 
-            src="/hero.jpeg" 
+            src="/hero.jpg" 
             alt="Vista panorámica del Hotel La Glorieta" 
             className="absolute inset-0 w-full h-full object-cover"
           />
