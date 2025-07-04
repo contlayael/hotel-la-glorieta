@@ -91,8 +91,8 @@ export default function App() {
     name: "Hotel La Glorieta",
     phone: "55-3077-1519",
     whatsappLink: "https://wa.me/525530771519?text=Hola,%20me%20gustaría%20pedir%20información%20sobre%20el%20Hotel%20La%20Glorieta.",
-    email: "contacto@hotellaglorieta.com", // Reemplazar con el email real
-    address: "Plaza de la Constitución 10, Otumba de Gómez Farías, Méx.", // Reemplazar con la dirección real
+    email: "hotel.laglorieta@hotmail.com", // Reemplazar con el email real
+    address: "Leona Vicario Manzana 028, 55900 Otumba de Gómez Farías, Méx.", // Reemplazar con la dirección real
     facebook: "https://www.facebook.com/share/1AKoAT4bDA/",
     instagram: "https://www.instagram.com/laglorietahm?utm_source=qr&igsh=ODB1a3hxbjUwOG1k",
   };
