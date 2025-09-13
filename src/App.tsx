@@ -4,12 +4,12 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { useAuthState } from 'react-firebase-hooks/auth'; // Necesitaremos esta librería
 import { getAuth } from 'firebase/auth';
 
-import Header from './components/layout/Header';
-import Footer from './components/layout/Footer';
-import HomePage from './pages/HomePage';
-import BookingPage from './pages/BookingPage';
-import AdminLoginPage from './pages/AdminLoginPage';
-import AdminDashboardPage from './pages/AdminDashboardPage';
+import Header from './components/layout/Header.tsx';
+import Footer from './components/layout/Footer.tsx';
+import HomePage from './pages/HomePage.tsx';
+import BookingPage from './pages/BookingPage.tsx';
+import AdminLoginPage from './pages/AdminLoginPage.tsx';
+import AdminDashboardPage from './pages/AdminDashboardPage.tsx';
 import { hotelInfo, navLinks } from './data/hotelData.tsx';
 
 // Para instalar react-firebase-hooks: npm install react-firebase-hooks
