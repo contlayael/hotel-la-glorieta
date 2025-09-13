@@ -1,7 +1,7 @@
 // src/components/booking/WalkInForm.tsx
 import React, { useState, useMemo } from 'react';
 import { db, addDoc, collection, serverTimestamp } from '../../services/firebase';
-import { ROOMS_DATA } from '../../data/hotelData.tsx';
+import { ROOMS_DATA } from '../../data/rooms.ts';
 import { Reservation } from '../../types';
 
 const initialState = {

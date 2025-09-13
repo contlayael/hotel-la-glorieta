@@ -7,9 +7,10 @@ import Services from '../components/sections/Services';
 import Gallery from '../components/sections/Gallery';
 import Tubohotel from '../components/sections/Tubohotel';
 import Contact from '../components/sections/Contact';
-
 // Importa los datos que necesitan los componentes
-import { hotelInfo, servicesData, galleryImages } from '../data/hotelData.tsx';
+import { galleryImages } from '../data/gallery.ts';
+import { hotelInfo     } from '../data/hotelInfo.ts';
+import { servicesData  } from '../data/services.tsx';
 
 export default function HomePage() {
   return (

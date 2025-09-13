@@ -1,7 +1,7 @@
 // src/components/booking/CustomerView.tsx
 import React, { useState, useEffect, useCallback } from 'react';
 import { db, collection, onSnapshot, addDoc, serverTimestamp, deleteDoc, doc, query } from '../../services/firebase';
-import { ROOMS_DATA } from '../../data/hotelData.tsx';
+import { ROOMS_DATA } from '../../data/rooms.ts';
 import BookingForm from './BookingForm';
 import { Room, Reservation } from '../../types'; // Importamos desde el archivo de tipos
 

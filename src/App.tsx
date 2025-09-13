@@ -10,7 +10,8 @@ import HomePage from './pages/HomePage.tsx';
 import BookingPage from './pages/BookingPage.tsx';
 import AdminLoginPage from './pages/AdminLoginPage.tsx';
 import AdminDashboardPage from './pages/AdminDashboardPage.tsx';
-import { hotelInfo, navLinks } from './data/hotelData.tsx';
+import  {hotelInfo}  from './data/hotelInfo.ts';
+import  {navLinks}  from './data/navigation.ts';
 
 // Para instalar react-firebase-hooks: npm install react-firebase-hooks
 
